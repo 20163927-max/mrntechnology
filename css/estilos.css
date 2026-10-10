@@ -1,196 +1,285 @@
-/* Configuración para Diseñadores Gráficos */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ff0000; /* Un rojo claro de fondo */
-    color: #333; /* Texto rojo oscuro para mejor lectura */
-    line-height: 1.6;
+/* --- Variables y Estilos Generales --- */
+:root {
+    --primary-color: #0b132b;
+    --accent-color: #3a86ff;
+    --text-color: #2b2d42;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --gray: #8d99ae;
+}
+
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-    background-color: #ff0000; /* Un color elegante */
-    color: white;
-    padding: 20px;
-    text-align: center;
+html {
+    scroll-behavior: smooth;
 }
 
-img {
-    border-radius: 50%; /* Hace que la foto de perfil sea circular */
-    border: 5px solid #fff;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+body {
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
 }
 
-section {
-    background: white;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 8px;
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* Estilos para el Formulario */
-#contacto {
-    background-color: var(--blanco);
-    padding: 40px;
-    border-radius: 15px;
-    margin-top: 20px;
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espacio entre los campos */
-}
-
-.grupo-entrada {
-    display: flex;
-    flex-direction: column;
-}
-
-.grupo-entrada label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: var(--azul-inem);
-}
-
-.grupo-entrada input, 
-.grupo-entrada textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-.boton-enviar {
-    background-color: var(--rojo-inem);
-    color: blue;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
+/* --- Botones --- */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
     transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
-/* Menú Superior */
-.menu-superior {
-    border-bottom: 2px solid #000000;
-    background-color: #C4C4C4; /* Azul - Así es visible */
-    padding: 15px 0;
-    position: sticky; 
+
+.btn-primary:hover {
+    background-color: #2667cc;
+}
+
+/* --- Header --- */
+.header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra para que resalte sobre el fondo */
-    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.contenedor-menu {
-    max-width: 1000px;
-    margin: 0 auto;
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    height: 70px;
 }
 
-.logo {
-    color: #ffffff; /* Blanco */
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+.logo-text {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--white);
 }
 
-.enlaces {
-    list-style: none;
+.logo-text span {
+    color: var(--accent-color);
+}
+
+.nav-menu {
     display: flex;
-    gap: 40px; /* Espacio entre botones */
-    margin: 0;
+    align-items: center;
+    gap: 20px;
 }
 
-.enlaces a {
-    color: #ffffff; /* Texto Blanco siempre visible */
+.nav-menu a {
+    color: var(--white);
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
-.enlaces a:hover {
-    color: #ff0000; /* Rojo cuando pasas el mouse */
+.nav-menu a:hover {
+    color: var(--accent-color);
 }
 
-/* Botón del Carrito resaltado */
-.boton-carrito {
-    background-color: #d32f2f; /* Rojo*/
-    padding: 8px 18px;
-    border-radius: 25px;
-    border: 2px solid #ffffff;
-}
-.boton-enviar:hover {
-    background-color: var(--azul-inem);
-}
-/* --- ESTILOS DE LA VITRINA DE PRODUCTOS --- */
-
-#productos {
-    padding: 60px 20px;
-    background-color: #f9f9f9; /* Gris muy suave para resaltar las tarjetas blancas */
+.btn-nav {
+    border: 1px solid var(--accent-color);
+    padding: 6px 15px;
+    border-radius: 4px;
 }
 
-.titulo-seccion {
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(11, 19, 43, 0.85), rgba(11, 19, 43, 0.85)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+    color: var(--white);
+    padding: 180px 0 100px;
     text-align: center;
-    color: #2c3e50;
-    margin-bottom: 40px;
 }
 
-.contenedor-productos {
-    display: flex;
-    flex-wrap: wrap;    /* Permite que los productos bajen en el celular */
-    gap: 30px;          /* Espacio entre tarjetas */
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
 }
 
-.tarjeta {
-    background-color: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;   /* Para que la imagen no se salga de las esquinas redondeadas */
-    width: 280px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #e0e0e0;
+}
+
+/* --- Sección Servicios --- */
+.services {
+    padding: 90px 0;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: var(--gray);
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s;
 }
 
-.tarjeta:hover {
-    transform: translateY(-10px); /* Efecto visual al pasar el mouse */
+.service-card:hover {
+    transform: translateY(-5px);
 }
 
-.tarjeta img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Recorta la imagen para que todas midan lo mismo */
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
 }
 
-.info-tarjeta {
+.service-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.service-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+/* --- Sección Nosotros --- */
+.about {
+    padding: 90px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-box {
+    background-color: var(--light-bg);
     padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    border-left: 4px solid var(--accent-color);
+}
+
+.stat-box h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+/* --- Sección Contacto --- */
+.contact {
+    padding: 90px 0;
+    background-color: var(--light-bg);
     text-align: center;
 }
 
-.precio {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #d32f2f; /* Rojo para el precio */
-    margin: 15px 0;
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.boton-anadir {
-    background-color: #27ae60; /* Verde "Comprar" */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+.form-group input,
+.form-group textarea {
     width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
-.boton-anadir:hover {
-    background-color: #1e8449;
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Simplificado para pantallas pequeñas */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
