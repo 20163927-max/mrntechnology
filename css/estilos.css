@@ -283,3 +283,9 @@ body {
         gap: 15px;
     }
 }
+/* --- Estilo para el Logo en el Header --- */
+.logo img {
+    height: 40px; /* Ajusta este valor si quieres que se vea más grande o pequeña */
+    width: auto;
+    display: block;
+}
