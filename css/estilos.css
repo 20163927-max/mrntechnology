@@ -282,10 +282,17 @@ body {
         flex-direction: column;
         gap: 15px;
     }
-}
+} /* <--- ¡ASEGÚRATE DE QUE ESTA LLAVE CIERRE LA MEDIA QUERY! */
+
 /* --- Estilo para el Logo en el Header --- */
-    .logo img {
-    height: 100px; /* Ajusta este valor si quieres que se vea más grande o pequeña */
+.logo img {
+    max-height: 50px; /* Tamaño ideal para que quepa perfecto en el header */
     width: auto;
     display: block;
+    object-fit: contain;
+}
+
+/* Opcional: si quieres que la barra del header sea más alta para acomodar un logo más grande */
+.nav-container {
+    height: 80px; /* Puedes subirlo a 80px o 90px si tu logo es muy alto */
 }
