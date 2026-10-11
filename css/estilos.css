@@ -296,3 +296,8 @@ body {
 .nav-container {
     height: 80px; /* Puedes subirlo a 80px o 90px si tu logo es muy alto */
 }
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
